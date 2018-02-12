@@ -72,7 +72,7 @@ public class MicrowaveTimeCalculator {
             		try {
             			//check if response if a number
             			snackCount = Integer.parseInt(input);//Convert string to double
-            			//ø©±‚ æ»ø°¥Ÿ «“∞≈ ≥÷¿∏∏È operate µ .
+            			//Ïó¨Í∏∞ ÏïàÏóêÎã§ Ìï†Í±∞ ÎÑ£ÏúºÎ©¥ operate Îê®.
         			
             			//if count is less or equal to 3
             			if (snackCount==1 || snackCount==2 || snackCount==3 ){
@@ -83,7 +83,7 @@ public class MicrowaveTimeCalculator {
                 		    int min = microwaveTime/60;
                 		    		
                 		    //get time in seconds (remainder)
-                		    int sec = microwaveTime % individualTime;
+                		    int sec = microwaveTime % 60;
                 		    
                 			System.out.println("Microwave your " + snackCount + " " + snackType + "(s) for "+ min + " minutes "+ sec + " seconds");
                 			break askSnack;//need break to get out of the two while loops and not repeat question
