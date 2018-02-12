@@ -49,6 +49,7 @@ public class MicrowaveTimeCalculator {
        	//----------------------------------------------------------------
         //while appropriate response has not been collected
        //use while-true functions to break out of
+	//get snack type
     	while (true) {
     		//keep asking for input
     		System.out.println("What snack? Pizza, Sub, or Soup?: ");
@@ -71,7 +72,8 @@ public class MicrowaveTimeCalculator {
         		}	
     	}//closing for while
     	
-    	
+	    
+    	//get snack count
        while(true) {
 			//Ask for number of snacks
 			System.out.println("How many do you wish to microwave?: ");
@@ -80,7 +82,7 @@ public class MicrowaveTimeCalculator {
    		try {
    			//check if response if a number
    			snackCount = Integer.parseInt(input);//Convert string to double
-   			//ø©±‚ æ»ø°¥Ÿ «“∞≈ ≥÷¿∏∏È operate µ .
+   			//Ïó¨Í∏∞ ÏïàÏóêÎã§ Ìï†Í±∞ ÎÑ£ÏúºÎ©¥ operate Îê®.
 			
    			//if count is less or equal to 3
    			if (snackCount==1 || snackCount==2 || snackCount==3 ){
