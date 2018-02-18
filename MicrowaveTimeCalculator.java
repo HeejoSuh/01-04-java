@@ -17,71 +17,93 @@ import java.util.Scanner;
 import java.util.HashMap;
 
 //****************************************************************************
-public class MicrowaveTimeCalculator {
+public class MicrowaveCalculator {
 
-    public class StringBlowup {
-	    
-	    //-----------------------------------------    
-	    public static void main(String[] args) {
-	    	//String Blowup
-	    	
-	    	//set up a scanner to get the response from the user
-	    	Scanner scanner = new Scanner(System.in);
-	    	
-	    	//set variables to a default	
-	    	String input = null, outputString = "";
-	    	
-	       	//----------------------------------------------------------------
-	        //while appropriate response has not been collected
-	       //use while-true functions to break out of
-	    	while (true) {
-	    		//keep asking for input
-	    		System.out.println("Input a string: ");
-			
-	    		//Get input as a string value-----
-	    		input = scanner.nextLine();
-	    		
-	    		//have to check if actual input has been put since 
-	    		//can't compare nil to string or number.
-	    	    if (input.length() != 0){
-	    	    	//send each letter to string blowup
-	    	    	
-	    	    	// for integer x from a ~ less than b, and increasing the value by 1 each time
-	    	    	//***java counts strings from 0 !!!*******
-	    	    	for ( int character=0; character<input.length(); character++ ) {
-	    	    		//Character.toString(char)
-	    	    		//need to convert char to string
-	    	             String currentChar = String.valueOf(input.charAt(character));
-	    	             //if character is a number
-	    	             try {
-	    	     	    	Integer characterNumber = Integer.parseInt(currentChar);//Convert string to integer
-	    	            	 //Check if it's the last value
-	    	            	 if (character == input.length()-1) {
-	    	            		 //if number is at the last place, skip it since no characters are on the right of it
-	    	            	 }else {
-	    	            		 //if number is not at the last place
-	    	            		 String charAfter = String.valueOf(input.charAt(character+1));
-	    	            		 //add that many of the following characters to string
-    	            			 for ( int number=0; number<characterNumber; number++ ) { 
-    	            				 outputString = outputString + charAfter;
-    	            			 }
-	    	            	 }
-	    	             } catch (NumberFormatException stringInput) {
-	    	            	 //if not a number
-	    	            	 outputString = outputString + currentChar;
-	    	             }
-	    	    	}
+    public static void main(String[] args) {
+    	//set up a scanner to get the response from the user
+    	Scanner scanner = new Scanner(System.in);
+    	
+    	//set mass to a random default
+    	//float = decimal with less places
+        float massInput= 0;
+        
+        
+        
+        //set food and count to a default
+        string inputFood = "" 
+        int foodCount = 0
+        
+        
+        
+        // create a new hashtable
+        Dictionary foods = new Hashtable();
+        //insert into dictionary
+        foods.put("sub", 1*60);
+        foods.put("pizza", 45);
+        foods.put("soup", 1.75*60);
+        
+        //Snack counts
+        snackCounts= [1,2,3]
+        
+        		
+        int [] snackCounts = [1,2,3]
+        		
+        //if correct snack type input
+        //if(Arrays.asList(snackCounts).contains(inputFood)){
+        if(Arrays.contains(inputFood)){
 
-	    	             System.out.println("The blown-up string is :" + outputString);
-	    	             break;
-	    	    }else{
-	    	    	//if entered in nothing
-	    	    	System.out.println("ERROR: no string found. Try again");
-	    	    }
-	    	}//closing for while
-	    	
-		    		
-	    			
-	    
-	    }//closing for main
-	}//closing for public class StringBlowup
+        }
+        		
+        		
+        // return an enumeration of the keys from this dictionary.
+        for (Enumeration e = foods.keys(); e.hasMoreElements();) {
+           System.out.println(e.nextElement());
+        }
+        
+        
+        
+       ////////////////////////////////////////////////////////////////////////////// max 3
+        	
+        //while appropriate response has not been collected
+    	while (massInput!= 0) {
+    		
+    		//ask for input snack
+    		System.out.print("What are you trying to microwave? sub, pizza, or soup? : ");
+
+    		//ask for number of snack
+    		System.out.print("How many" + inputFood + "s are you trying to microwave? (Maximum Count: 3): ");
+    		
+    		
+    		float snackCount
+    		//calculate microwave time
+    		//2->increase the time by 50%, 3-> increase it by 100% ... so:
+    		float microwaveTime = (snackCount+1)*0.5
+    		
+    	
+    		//set new mass
+    		float input = scanner.nextFloat();
+    		
+    		
+    			//if appropriate response has been collected
+    			if ( put in correct snack type){
+
+    				//allow input
+    				massInput= input
+    				//define constants
+    				int c= 2.998*108 // m/s
+    				//calculate
+    				//E= mc^2
+    				float energyCanCreate = massInput * Math.pow(c, 2);
+    				
+    				
+    				System.out.println("You need to microwave your " + snackCount + " " + inputFood + "s for " + microwaveTime + " seconds.");
+    			
+    			//else if wrong input
+    			}else {
+    				System.out.println("                  ERROR:\nInvalid input.TRY AGAIN. \n\n");
+    				
+    			}//closing for if
+    			
+    	}//closing for while
+    }//closing for public static void main
+}//closing for public class MicrowaveCalculator
